@@ -1,0 +1,24 @@
+@use "./../variables/" as var;
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+
+* {
+    font-family:'Montserrat', sans-serif;
+    font-style: normal;
+    color: var.$white;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+main {
+    background-color: #3c374496;
+    position: relative;
+}

@@ -1,0 +1,18 @@
+@use "./../variables/" as var;
+
+header {
+    position: fixed;
+    width: 100vw;
+    height: 10vh;
+    top:0;
+    background-color: var.$brown;
+    border-bottom: 4px solid var.$paleBlue;
+    padding: 1em;
+    z-index: 1;
+}
+
+nav a {
+    text-decoration: none;
+    color:var.$white;
+    
+}
