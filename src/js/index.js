@@ -58,21 +58,14 @@ scene.background = bgColor;
 
 // obj positioning
 
-cube1.position.x = -19;
-cube1.position.y = -8;
-cube1.position.z = 8;
+cube1.position.set(-19, -8, 8);
 
-cube2.position.x = 7;
-cube2.position.y = -4;
-cube2.position.z = 22;
+cube2.position.set(7, -4, 22);
 
-cube3.position.x = -8;
-cube3.position.y = 2;
-cube3.position.z = 10;
+cube3.position.set(-8, 2, 10);
 
-cube4.position.x = 12;
-cube4.position.y = -13;
-cube4.position.z = 15;
+cube4.position.set(12, -13, 15);
+
 
 
 function moveCamera() {

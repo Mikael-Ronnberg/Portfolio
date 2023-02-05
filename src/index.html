@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mikaels Portfolio</title>
+    <title>This is a Portfolio</title>
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <link rel="stylesheet" href="/src/scss/main.scss"/>
-    <script src="/src/js/index.js" defer type="module"></script>
+    <script src="/src/ts/index.ts" defer type="module"></script>
 
 </head>
 <body>
@@ -31,7 +32,7 @@
 
             <!-- First Page -->
 
-        <div id="home">
+        <div id="home" class="hidden visible_content">
             <div>
                 <h2 class="homeHeader">Web Developer</h2>
                 <span class="homeSpan">Indulging in Web-based Creations</span>
@@ -42,7 +43,7 @@
 
             <!-- About Me page -->
 
-        <div id="about">
+        <div id="about" class="hidden visible_content">
             <div>
                 <h2 class="normalHeader">About me</h2>
             </div>
@@ -52,13 +53,13 @@
         </div>
 
             <!-- Project Page -->
-        <div id="project">
+        <div id="project" class="hidden visible_content">
             <h2 class="normalHeader">Projects</h2>
 
         </div>
 
             <!-- Contact page -->
-        <div id="contact">
+        <div id="contact" class="hidden visible_content">
                 <h2 class="normalHeader">Contact Me</h2>
                 <span class="normalSpan">If you have any questions or toughts, feel free to hit me up!</span>
               <a href="mailto:mikael.rnnberg@gmail.com"></a>
@@ -67,6 +68,12 @@
         <!-- Footer  -->
 
         <footer id="footer">
+            <ul>
+                <li><a href=""><i class="bi bi-github"></i>
+                </a></li>
+                <li><a href=""><i class="bi bi-linkedin"></i>
+                </a></li>
+            </ul>
         </footer>
     </main>
 </body>
