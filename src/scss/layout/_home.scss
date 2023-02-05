@@ -1,13 +1,39 @@
+@use "./../variables/" as var;
+
 #home {
-  height: 100vh;
+  height: 80vh;
+  overflow: scroll;
 }
 
 .homeHeader {
-  font-size: 20rem;
+  font-size: 5rem;
   margin: 0.5rem;
+  writing-mode: vertical-rl;
+  padding-bottom: 2rem;
+
+  @include var.mobile {
+    writing-mode: horizontal-tb;
+  }
+
+  @include var.tablet {
+    font-size: 6rem;
+    padding-bottom: 10rem;
+  }
+  @include var.desktop {
+    font-size: 15rem;
+    padding-bottom: 7rem;
+    margin: 0;
+  }
 }
 
 .homeSpan {
-  font-size: 5rem;
-  margin: 1rem;
+  font-size: 2rem;
+
+  @include var.tablet {
+    font-size: 3rem;
+    margin: 0 1 0rem;
+  }
+  @include var.desktop {
+    font-size: 5rem;
+  }
 }

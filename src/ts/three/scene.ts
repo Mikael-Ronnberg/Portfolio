@@ -18,26 +18,24 @@ camera.position.setZ(30);
 
 scene.add( models.cube2, models.cube1, models.cube3, models.cube4 );
 
-// balls
+// const pointLight = new THREE.PointLight("rgb(255, 255, 255)", 2);
+const directionalLight1 = new THREE.DirectionalLight( 0xffffff, 2 )
+directionalLight1.position.set(12, 4, 10);
+const directionalLight2 = new THREE.DirectionalLight( 0xffffff, 2 )
+directionalLight1.position.set(-12, -4, -10);
 
+// const ambientLight = new THREE.AmbientLight(0x3fffff);
+scene.add(directionalLight1, directionalLight2);
 
-// light
-
-const pointLight = new THREE.PointLight(0xffffff, 20);
-pointLight.position.set(113, 3, 3);
-
-const ambientLight = new THREE.AmbientLight(0x3fffff);
-scene.add(pointLight, ambientLight);
-
-const lightHelper = new THREE.PointLightHelper(pointLight);
-const gridHelper = new THREE.GridHelper(200, 50);
-scene.add(lightHelper);
+// const lightHelper = new THREE.PointLightHelper(pointLight);
+// const gridHelper = new THREE.GridHelper(200, 50);
+// scene.add(lightHelper);
 
 const controls = new OrbitControls(camera, renderer.domElement);
 
 // scene prep
 
-const bgColor =  new THREE.Color("rgb(60, 55, 68)")
+const bgColor =  new THREE.Color("rgb(0, 0, 0)")
 
 scene.background = bgColor;
 
@@ -54,7 +52,6 @@ models.cube4.position.set(12, -13, 15);
 
 
 function moveCamera() {
-
     const t = document.body.getBoundingClientRect().top;
 
     models.cube1.rotation.x += 0.01;
@@ -69,8 +66,6 @@ function moveCamera() {
     models.cube4.rotation.x += 0.01;
     models.cube4.rotation.y += 0.02;
 
-
-
     camera.position.y = t * 0.004;
     // camera.position.x = t * 0.007;
     // camera.position.z = t * 0.0003;
@@ -80,10 +75,7 @@ document.body.onscroll = moveCamera
 
 export function animate() {
     requestAnimationFrame(animate);
-
-
     controls.update();
-
     renderer.render(scene, camera);
 }
 

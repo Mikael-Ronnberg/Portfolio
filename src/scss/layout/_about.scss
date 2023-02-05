@@ -1,13 +1,30 @@
+@use "../variables/" as var;
+
 #about {
-    height: 100vh;
+  height: 80vh;
+  overflow: scroll;
 }
 
 .normalHeader {
-    font-size: 5em;
-    margin: 1em;
+  font-size: 2.5em;
+  padding-bottom: 2.5rem;
+
+  @include var.tablet {
+    font-size: 3rem;
+    margin: 0 2 0rem;
+  }
+  @include var.desktop {
+    font-size: 4.5rem;
+  }
 }
 
 .normalSpan {
-    font-size: 2em;
-    margin: 1em;
+  font-size: 1.3em;
+  margin: 0 0.3 0rem;
+  @include var.tablet {
+    font-size: 2rem;
+  }
+  @include var.desktop {
+    font-size: 2.4rem;
+  }
 }

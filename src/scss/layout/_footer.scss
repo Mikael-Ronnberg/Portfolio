@@ -1,13 +1,19 @@
 @use "./../variables/" as var;
 
 footer {
-  font-size: 4rem;
-  height: 40vh;
+  padding: 2rem;
+  font-size: 8rem;
+  height: 20vh;
   display: flex;
   justify-content: center;
   background-color: var.$brown;
-  border: 2px solid var.$paleBlue;
-  li {
+  border-top: 2px solid var.$paleBlue;
+
+  ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
     list-style: none;
+    gap: 20rem;
   }
 }

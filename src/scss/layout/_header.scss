@@ -1,18 +1,37 @@
 @use "./../variables/" as var;
 
 header {
-    position: fixed;
-    width: 100vw;
-    height: 10vh;
-    top:0;
-    background-color: var.$brown;
-    border-bottom: 4px solid var.$paleBlue;
-    padding: 1em;
-    z-index: 1;
+  width: 100vw;
+  height: 10vh;
+  top: 0;
+  font-size: 1.3rem;
+  background-color: var.$brown;
+  border-bottom: 4px solid var.$paleBlue;
+  padding: 2rem;
+  z-index: 1;
+  @include var.tablet {
+    font-size: 2rem;
+  }
+  @include var.desktop {
+    padding: 2.5rem;
+  }
 }
 
-nav a {
+nav {
+  a {
     text-decoration: none;
-    color:var.$white;
-    
+    color: var.$white;
+  }
+  ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    list-style: none;
+    gap: 4rem;
+
+    @include var.desktop {
+      gap: 10rem;
+      justify-content: flex-end;
+    }
+  }
 }
