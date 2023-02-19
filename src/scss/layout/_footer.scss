@@ -1,19 +1,27 @@
 @use "./../variables/" as var;
 
 footer {
+  font-size: 4rem;
+  height: 13vh;
+  width: 100vw;
   padding: 2rem;
-  font-size: 8rem;
-  height: 20vh;
-  display: flex;
-  justify-content: center;
-  background-color: var.$brown;
   border-top: 2px solid var.$paleBlue;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: var.$brown;
+  @include var.tablet {
+    font-size: 5rem;
+  }
+  @include var.desktop {
+    padding: 6rem;
+  }
 
   ul {
     display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
     list-style: none;
-    gap: 20rem;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
   }
 }

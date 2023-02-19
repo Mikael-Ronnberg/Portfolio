@@ -4,16 +4,18 @@ header {
   width: 100vw;
   height: 10vh;
   top: 0;
-  font-size: 1.3rem;
+  font-size: 0.9rem;
   background-color: var.$brown;
   border-bottom: 4px solid var.$paleBlue;
-  padding: 2rem;
-  z-index: 1;
-  @include var.tablet {
+  padding: 1rem;
+  @include var.mobile {
     font-size: 2rem;
   }
+  @include var.tablet {
+    // font-size: 2rem;
+  }
   @include var.desktop {
-    padding: 2.5rem;
+    padding: 0;
   }
 }
 
@@ -23,15 +25,17 @@ nav {
     color: var.$white;
   }
   ul {
+    padding-top: 0.5rem;
     display: flex;
     flex-direction: row;
+    align-items: center;
     justify-content: space-between;
     list-style: none;
-    gap: 4rem;
-
+    // gap: 4rem;
     @include var.desktop {
       gap: 10rem;
       justify-content: flex-end;
+      padding: 2rem;
     }
   }
 }

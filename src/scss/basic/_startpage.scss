@@ -1,9 +1,11 @@
 @use "./../variables/" as var;
 
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
 
 * {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Chakra Petch", "Montserrat Alternates", "Montserrat", sans-serif;
   font-style: normal;
   color: var.$white;
   padding: 0;
@@ -20,6 +22,10 @@ canvas {
 main {
   background-color: #3c374474;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .hidden {
@@ -36,13 +42,13 @@ main {
 }
 
 .visible_content {
-  border: 3px solid;
-  border-radius: 15px;
-  box-shadow: 0 0 10px 5px #fff, 0 0 20px 10px rgb(255, 145, 0),
-    0 0 30px 15px rgb(235, 44, 44);
+  width: 95vw;
+  border-radius: 8px;
+  box-shadow: 0 0 5px 2px rgb(255, 255, 255), 0 0 10px 6px rgb(255, 145, 0),
+    0 0 15px 10px rgb(235, 44, 44);
   background-color: #473731aa;
-  padding: 5rem;
-  margin: 5rem;
+  padding: 1.5rem;
+  margin: 2rem;
 }
 
 @keyframes scaleS {
