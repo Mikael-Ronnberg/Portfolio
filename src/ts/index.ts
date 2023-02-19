@@ -38,27 +38,37 @@ function createObjectsOnDom(repositories: IRepos[]) {
             let repoCont: HTMLDivElement = document.createElement("div") as HTMLDivElement;
             let repoHead: HTMLHeadingElement = document.createElement("h3") as HTMLHeadingElement;
             let repoText: HTMLParagraphElement = document.createElement("p") as HTMLParagraphElement;
-            let repoBtn1: HTMLButtonElement = document.createElement("button") as HTMLButtonElement;
-            let repoBtn2: HTMLButtonElement = document.createElement("button") as HTMLButtonElement;
+            let repoImg: HTMLImageElement = document.createElement("img") as HTMLImageElement;
+            let btnCont: HTMLDivElement = document.createElement("div") as HTMLDivElement;
+            let repoBtn1: HTMLAnchorElement = document.createElement("a") as HTMLAnchorElement;
+            let repoBtn2: HTMLAnchorElement = document.createElement("a") as HTMLAnchorElement;
 
             repoCont.classList.add("repoContainer");
             repoHead.classList.add("repoHeader");
             repoText.classList.add("repoText");
+            repoImg.classList.add("repoImage");
+            btnCont.classList.add("btnContainer");
             repoBtn1.classList.add("repoBtns");
             repoBtn2.classList.add("repoBtns");
-    
+            
+
+
             repoHead.innerText = repositories[i].name;
+            repoImg.src = `img/${repositories[i].name}.png`;
+            repoImg.alt = `${repositories[i].name} image`;
             repoText.innerText = repositories[i].description || "";
-            repoBtn1.innerHTML = `
-                <a href="${repositories[i].homepage}" target="blank">Deploy Site
-            `;
-            repoBtn2.innerHTML = `
-                <a href="${repositories[i].html_url}" target="blank">Visit Repository
-            `;
+            repoBtn1.href = repositories[i].homepage;
+            repoBtn1.target = "blank";
+            repoBtn1.innerHTML = "Deploy Site";
+            repoBtn2.href = repositories[i].html_url;
+            repoBtn2.target = "blank";
+            repoBtn2.innerHTML = "Visit Repository";
             repoCont.appendChild(repoHead);
+            repoCont.appendChild(repoImg);
             repoCont.appendChild(repoText);
-            repoCont.appendChild(repoBtn1);
-            repoCont.appendChild(repoBtn2);
+            btnCont.appendChild(repoBtn1);
+            btnCont.appendChild(repoBtn2);
+            repoCont.appendChild(btnCont);
             
     
             repoContainer.appendChild(repoCont);        

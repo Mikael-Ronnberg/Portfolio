@@ -29,15 +29,15 @@
 }
 
 .normalSpan {
-  font-size: 1.3em;
+  font-size: 1rem;
   padding: 10 1rem;
   max-width: 1000px;
   @include var.tablet {
-    font-size: 1.8rem;
+    font-size: 1.3rem;
     padding: 1 2rem;
   }
   @include var.desktop {
-    font-size: 2.1rem;
+    font-size: 1.5rem;
     padding: 10 7rem;
   }
 }
