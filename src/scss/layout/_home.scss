@@ -3,10 +3,11 @@
 #home {
   // height: 90vh;
   // overflow: scroll;
+  margin: 3rem;
   display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: flex-end;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
 
   @include var.tablet {
     flex-direction: column;
@@ -16,7 +17,7 @@
 
 .homeHeader {
   font-size: 8rem;
-  margin: 0.7rem;
+  margin: 10 1 rem;
   writing-mode: vertical-rl;
   @include var.mobile {
     writing-mode: horizontal-tb;
@@ -24,7 +25,7 @@
   @include var.tablet {
     word-spacing: 100vw;
     font-size: 10rem;
-    // padding-bottom: 10rem;
+    padding: 1 rem;
   }
   @include var.desktop {
     font-size: 15rem;
@@ -35,15 +36,13 @@
 
 .homeSpan {
   font-size: 2rem;
-  // padding-bottom: 200px;
-  // text-align: center;
-
+  padding-top: 5rem;
   @include var.tablet {
     font-size: 3rem;
-    padding: 2rem;
   }
   @include var.desktop {
     font-size: 5rem;
-    // margin-left: 3rem;
+    padding-left: 2rem;
+    padding-bottom: 4rem;
   }
 }

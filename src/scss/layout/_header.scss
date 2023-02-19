@@ -2,20 +2,22 @@
 
 header {
   width: 100vw;
-  height: 10vh;
-  top: 0;
-  font-size: 0.9rem;
+  height: 7vh;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
   background-color: var.$brown;
   border-bottom: 4px solid var.$paleBlue;
-  padding: 1rem;
   @include var.mobile {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
   @include var.tablet {
-    // font-size: 2rem;
+    height: 10vh;
   }
   @include var.desktop {
-    padding: 0;
+    justify-content: flex-end;
+    padding: 1rem;
   }
 }
 
@@ -28,14 +30,15 @@ nav {
     padding-top: 0.5rem;
     display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
+    gap: 8rem;
+    // align-items: center;
+    justify-content: space-evenly;
     list-style: none;
     // gap: 4rem;
     @include var.desktop {
-      gap: 10rem;
-      justify-content: flex-end;
-      padding: 2rem;
+      // gap: 6rem;
+      // justify-content: flex-end;
+      font-size: 2rem;
     }
   }
 }
