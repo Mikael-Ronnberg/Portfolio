@@ -18,7 +18,6 @@ const observer = new IntersectionObserver((entries) => {
 const hiddenElements = document.querySelectorAll(".hidden");
 hiddenElements.forEach((el) => observer.observe(el));
 
-
 const repoContainer: HTMLDivElement = document.getElementById("dynamicUpload") as HTMLDivElement;
 
 addEventListener("DOMContentLoaded", async () => {
@@ -27,7 +26,6 @@ addEventListener("DOMContentLoaded", async () => {
     console.log(repos);
 
 })
-
 
 function createObjectsOnDom(repositories: IRepos[]) {
 
@@ -51,8 +49,6 @@ function createObjectsOnDom(repositories: IRepos[]) {
             repoBtn1.classList.add("repoBtns");
             repoBtn2.classList.add("repoBtns");
             
-
-
             repoHead.innerText = repositories[i].name;
             repoImg.src = `img/${repositories[i].name}.png`;
             repoImg.alt = `${repositories[i].name} image`;

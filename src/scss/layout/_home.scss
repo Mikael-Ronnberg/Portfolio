@@ -16,10 +16,11 @@
 }
 
 .homeHeader {
-  font-size: 8rem;
+  font-size: 5rem;
   margin: 10 1 rem;
   writing-mode: vertical-rl;
   @include var.mobile {
+    font-size: 8rem;
     writing-mode: horizontal-tb;
   }
   @include var.tablet {
