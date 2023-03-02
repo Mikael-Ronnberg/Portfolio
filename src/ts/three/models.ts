@@ -6,13 +6,13 @@ const texture = new THREE.TextureLoader().load("img/Metal_ArtDeco_Tiles_001_base
 material.map = texture;
 const displacementMaterial = new THREE.TextureLoader().load("img/Metal_ArtDeco_Tiles_001_metallic.jpg");
 material.displacementMap = displacementMaterial;
-const color1 = new THREE.Color("rgb(227, 101, 0)");
+const color1 = new THREE.Color("rgb(10, 54, 157)");
 const normalTexture = new THREE.TextureLoader().load("img/Metal_ArtDeco_Tiles_001_normal.jpg");
 material.normalMap = normalTexture;
 material.color = color1;
-material.normalScale.set(2, 2);
+// material.normalScale.set(2, 2);
 material.displacementScale = .2, .2;
-material.displacementBias = -.1, -.1;
+material.displacementBias = -.125, -.125;
 
 const c1geometry = new THREE.BoxGeometry( 10, 10, 10 );
 export const cube1 = new THREE.Mesh( c1geometry, material );

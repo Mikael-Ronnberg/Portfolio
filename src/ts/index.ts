@@ -54,11 +54,11 @@ function createObjectsOnDom(repositories: IRepos[]) {
             repoImg.alt = `${repositories[i].name} image`;
             repoText.innerText = repositories[i].description || "";
             repoBtn1.href = repositories[i].homepage;
-            repoBtn1.target = "blank";
-            repoBtn1.innerHTML = "Deploy Site";
+            repoBtn1.target = "_blank";
+            repoBtn1.innerText = "Deploy Site";
             repoBtn2.href = repositories[i].html_url;
-            repoBtn2.target = "blank";
-            repoBtn2.innerHTML = "Visit Repository";
+            repoBtn2.target = "_blank";
+            repoBtn2.innerText = "Visit Repository";
             repoCont.appendChild(repoHead);
             repoCont.appendChild(repoImg);
             repoCont.appendChild(repoText);

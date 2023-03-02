@@ -35,7 +35,7 @@ const controls = new OrbitControls(camera, renderer.domElement);
 
 // scene prep
 
-const bgColor =  new THREE.Color("rgb(0, 0, 0)")
+const bgColor =  new THREE.Color("rgb(255, 255, 255)")
 
 scene.background = bgColor;
 

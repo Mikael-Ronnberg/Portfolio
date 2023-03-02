@@ -1,7 +1,7 @@
 @use "../variables/" as var;
 
 #project {
-  margin-top: 15rem;
+  margin-top: 5rem;
   min-height: 70vh;
 }
 
@@ -13,7 +13,7 @@
 
 .repoContainer {
   min-width: 30vw;
-  border-top: 2px solid orange;
+  border-top: 2px solid rgb(10, 54, 157);
   margin: 2rem;
   padding: 2rem;
   display: flex;
@@ -65,15 +65,15 @@
   margin: 1rem;
   //   max-width: 10rem;
   //   height: 2.5rem;
-  padding: 1.5 2rem;
+  padding: 4 2.3rem;
   border-radius: 5px;
   font-size: 1.2rem;
-  background: rgb(236, 150, 78);
-  color: black;
+  z-index: 11333;
+  background-color: rgb(16, 69, 169);
+  color: var.$white;
   text-decoration: none;
-  :hover {
-    background-color: rgb(157, 82, 22);
+  &:hover {
+    background-color: rgb(10, 54, 157) !important;
     cursor: pointer;
-    scale: 1.2;
   }
 }
